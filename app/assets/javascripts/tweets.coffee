@@ -7,10 +7,10 @@ $(document).on 'ready turbolinks:load', ->
     #つぶやきをくま語に変換
     contents = $(".tweet-content")
     for content in contents
+        content.innerHTML = content.innerHTML.replace(/$/,"くま");
         content.innerHTML = content.innerHTML.replace(/。/g,"くま。");
         content.innerHTML = content.innerHTML.replace(/？/g,"くま？");
         content.innerHTML = content.innerHTML.replace(/！/g,"くま！");
-        content.innerHTML = content.innerHTML.replace(/$/,"くま");
         content.innerHTML = content.innerHTML.replace(/。くま$/,"。");
         content.innerHTML = content.innerHTML.replace(/？くま$/,"？");
         content.innerHTML = content.innerHTML.replace(/！くま$/,"！")   
@@ -25,6 +25,7 @@ $(document).on 'ready turbolinks:load', ->
         "そういえば・・・"
         "よろしくまです。"
         "くまと人間の共生について"
+        "Re:くまと人間の共生について"
         "そうですか？"
         "うーん"
         "あれ？"
